@@ -3,7 +3,7 @@ package hudson.plugins.cppncss.parser;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import hudson.model.AbstractBuild;
 
-import javax.annotation.CheckForNull;
+import edu.umd.cs.findbugs.annotations.CheckForNull;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;

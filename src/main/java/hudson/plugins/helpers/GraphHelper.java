@@ -1,5 +1,6 @@
 package hudson.plugins.helpers;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.model.AbstractBuild;
 import hudson.model.Run;
 import hudson.plugins.cppncss.AbstractBuildReport;
@@ -27,8 +28,7 @@ import org.jfree.ui.RectangleInsets;
 import org.kohsuke.stapler.StaplerRequest;
 import org.kohsuke.stapler.StaplerResponse;
 
-import javax.annotation.CheckForNull;
-import javax.annotation.Nonnull;
+import edu.umd.cs.findbugs.annotations.CheckForNull;
 
 /**
  * TODO javadoc.
@@ -235,8 +235,8 @@ public class GraphHelper {
 		    categoryPlot.setRenderer(index,rendu);
 	}
 
-	@Nonnull
-	private static CategoryDataset buildDataset(@CheckForNull AbstractBuild<?, ?> build, @Nonnull DataCollector collector) {
+	@NonNull
+	private static CategoryDataset buildDataset(@CheckForNull AbstractBuild<?, ?> build, @NonNull DataCollector collector) {
     	DataSetBuilder<String, NumberOnlyBuildLabel> builder = new DataSetBuilder<String, NumberOnlyBuildLabel>();
 
     	if (build != null) {

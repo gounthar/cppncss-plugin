@@ -23,7 +23,7 @@
  */
 package hudson.plugins.cppncss.parser;
 
-import javax.annotation.Nonnull;
+import edu.umd.cs.findbugs.annotations.NonNull;
 
 /**
  * Summary for {@link Statistic}.
@@ -37,7 +37,7 @@ public abstract class StatisticSummary {
      * Gets raw HTML summary string
      * @return Summary String
      */
-    @Nonnull
+    @NonNull
     public abstract String getHtmlSummary();
 
 }

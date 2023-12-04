@@ -23,10 +23,10 @@
  */
 package hudson.plugins.cppncss.parser;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
+
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.NoExternalUse;
-
-import javax.annotation.Nonnull;
 
 /**
  * @author Oleg Nenashev
@@ -54,7 +54,7 @@ public final class FormattedStatisticSummary extends StatisticSummary {
         this(0,0,0, ccn, functions, ncss);
     }
 
-    public FormattedStatisticSummary(@Nonnull Statistic was, @Nonnull Statistic now) {
+    public FormattedStatisticSummary(@NonNull Statistic was, @NonNull Statistic now) {
         this(was.getCcn(), was.getFunctions(), was.getNcss(), now.getCcn(), now.getFunctions(), now.getNcss());
     }
 

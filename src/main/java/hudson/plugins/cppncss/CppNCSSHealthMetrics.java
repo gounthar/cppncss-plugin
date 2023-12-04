@@ -1,5 +1,6 @@
 package hudson.plugins.cppncss;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.model.AbstractBuild;
 import hudson.plugins.cppncss.parser.Statistic;
 import hudson.plugins.helpers.health.HealthMetric;
@@ -8,8 +9,7 @@ import java.util.Collection;
 
 import org.apache.commons.beanutils.Converter;
 
-import javax.annotation.CheckForNull;
-import javax.annotation.Nonnull;
+import edu.umd.cs.findbugs.annotations.CheckForNull;
 
 /**
  * Created by IntelliJ IDEA. User: stephen Date: 18-Mar-2008 Time: 06:04:17 To change this template use File | Settings
@@ -140,7 +140,7 @@ public enum CppNCSSHealthMetrics implements HealthMetric<CppNCSSBuildIndividualR
 	};
 
     @CheckForNull
-	private static CppNCSSBuildIndividualReport getPreviousCppNCSSReport(@Nonnull AbstractBuild<?, ?> build){
+	private static CppNCSSBuildIndividualReport getPreviousCppNCSSReport(@NonNull AbstractBuild<?, ?> build){
 		AbstractBuild<?, ?> previousBuild = build.getPreviousBuild();
 		while(previousBuild != null){
 		    AbstractBuildReport report = previousBuild.getAction(AbstractBuildReport.class);
